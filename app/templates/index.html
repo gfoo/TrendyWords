@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <h1>TrendyWords 8-|</h1>
+
+{% extends "base.html" %}
+
+
+{% block content %}
+  <h1>TrendyWords 8-|</h1>
     {% if projects %}
     <ul>
       {% for project in projects %}
@@ -14,5 +15,5 @@
     {% else %}
     <p>No projects are available.</p>
     {% endif %}
-  </body>
-</html>
+
+ {% endblock %}

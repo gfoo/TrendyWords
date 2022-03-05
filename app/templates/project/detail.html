@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <h1>TrendyWords 8-|</h1>
-    <p>Project (ID {{project.id}}) : {{ project.name }}</p>
-    <p>Desc : {{ project.description}}</p>
-  </body>
-</html>
+{% extends "base.html" %} 
+
+{% block content %}
+<p>Project (ID {{project.id}}) : {{ project.name }}</p>
+<p>Desc : {{ project.description}}</p>
+{% endblock %}
