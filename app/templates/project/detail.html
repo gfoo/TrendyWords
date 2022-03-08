@@ -3,4 +3,12 @@
 {% block content %}
 <p>Project (ID {{project.id}}) : {{ project.name }}</p>
 <p>Desc : {{ project.description}}</p>
+<p>Harvesters :</p>
+<ul>
+    {% for harvester in harvesters %}
+        <li>{{ harvester.name }} ({{harvester.periodic_task}})</li>
+    {% empty %}
+        <li>No harvesters added.</li>
+    {% endfor %}
+</ul>
 {% endblock %}
