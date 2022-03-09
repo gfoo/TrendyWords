@@ -8,3 +8,6 @@ class Harvester(models.Model):
     periodic_task = models.ForeignKey(
         PeriodicTask, null=False, on_delete=models.CASCADE)
     project = models.ForeignKey(Project,  null=False, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return f"Harvester: {self.name} ({self.periodic_task})"
