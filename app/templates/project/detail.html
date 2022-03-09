@@ -1,6 +1,7 @@
 {% extends "base.html" %} 
 
 {% block content %}
+
 <p>Project (ID {{project.id}}) : {{ project.name }}</p>
 <p>Desc : {{ project.description}}</p>
 <p>Harvesters :</p>
@@ -11,4 +12,4 @@
         <li>No harvesters added.</li>
     {% endfor %}
 </ul>
-{% endblock %}
+{% endblock content %}

@@ -4,10 +4,10 @@ from harvester.models import Harvester
 from .models import Project
 
 
-def index(request):
-    projects = Project.objects.all()
+def projects(request):
+    projects = Project.objects.order_by('name')
     context = {'projects': projects}
-    return render(request, 'index.html', context)
+    return render(request, 'projects.html', context)
 
 
 def project_detail(request, project_id):
